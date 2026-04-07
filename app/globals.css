@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --foreground-rgb: 30, 41, 59;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+  }
+
+  body {
+    @apply bg-white text-slate-800 antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-montserrat);
+  }
+
+  p, span, a, button {
+    font-family: var(--font-poppins);
+  }
+}
+
+@layer components {
+  .glass-nav {
+    @apply bg-white/70 backdrop-blur-lg border-b border-white/20;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, #001F3F 0%, #003366 50%, #004080 100%);
+  }
+
+  .hover-zoom:hover img {
+    @apply scale-110 transition-transform duration-500;
+  }
+}
